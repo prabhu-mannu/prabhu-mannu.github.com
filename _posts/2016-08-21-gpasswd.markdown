@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "How to remove user from a group in linux"
+date:   2016-08-21 22:00:07 +0800
+categories:
+- liux
+- user managment
+tags:
+- linux
+- centos
+- redhat
+- user managment
+- gpasswd
+---
+
+you can remove a user from a group by using the command `gpasswd`
+
+Syntax: `gpasswd -d <username> <groupname>`
+
+{% highlight shell %}
+gpasswd -d prabhu wheel
+{% endhighlight %}

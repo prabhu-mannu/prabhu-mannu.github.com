@@ -23,5 +23,4 @@ github_username:  prabhu-mannu
 # Build settings
 markdown: kramdown
 highlighter: rouge
-theme: minima
 permalink: /:categories/:title.html

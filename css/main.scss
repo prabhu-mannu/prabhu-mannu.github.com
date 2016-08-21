@@ -38,20 +38,11 @@ $on-laptop:        800px;
 
 // Import partials from the `minima` theme.
 @import "minima";
-html,
-body {
-	height:100%;
-}
 .site-header{
   background:#008080;
 }
 .site-title, .site-title:visited {
     color: #fdfdfd; }
-
-.site-footer {
-	width:100%;
-  position: absolute;
-}
 .post-content{
   padding: 5px;
 }

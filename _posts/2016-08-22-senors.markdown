@@ -3,7 +3,7 @@ layout: post
 title:  "how to check the cpu and disk temperatures using senors"
 date:   2016-08-22  +0800
 categories:
-- liux
+- linux
 - hardware managment
 tags:
 - linux

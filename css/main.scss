@@ -4,19 +4,19 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family: ‘Times New Roman’, Times, serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
+$small-font-size: $base-font-size * 0.75;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$text-color: #bbbbbb;
+$background-color: #3c3f41;
+$brand-color: #d7695a;
 
-$grey-color:       #828282;
+$grey-color: #8c8c8c;
 $grey-color-light: lighten($grey-color, 20%);
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
@@ -39,7 +39,22 @@ $on-laptop:        800px;
 // Import partials from the `minima` theme.
 @import "minima";
 .site-header{
-  background:#008080;
+  background: #f44336;
 }
 .site-title, .site-title:visited {
-    color: #fdfdfd; }
+  color: #f5f5f5;
+}
+
+pre,
+code {
+  font-size: 15px;
+  border: 1px solid #f2f2f2;
+  border-radius: 3px;
+  background-color: #004d40;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.site-nav .page-link {
+  color: #f5f5f5;
+}

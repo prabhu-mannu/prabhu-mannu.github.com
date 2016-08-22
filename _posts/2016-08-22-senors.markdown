@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "how to check the cpu and disk temperatures using senors"
+title:  "How to check the cpu and disk temperatures using senors"
 date:   2016-08-22  +0800
 categories:
 - linux
-- hardware managment
+- hardware management
 tags:
 - linux
 - centos
 - redhat
-- hardware managment
+- hardware management
 - sensors
 ---
 

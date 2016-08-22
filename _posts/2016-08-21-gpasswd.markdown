@@ -1,15 +1,15 @@
 ---
 layout: post
 title:  "How to remove user from a group in linux"
-date:   2016-08-21 22:00:07 +0800
+date:   2016-08-21 +0800
 categories:
 - linux
-- user managment
+- user management
 tags:
 - linux
 - centos
 - redhat
-- user managment
+- user management
 - gpasswd
 ---
 

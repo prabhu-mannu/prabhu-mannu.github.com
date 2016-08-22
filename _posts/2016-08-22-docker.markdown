@@ -1,0 +1,38 @@
+---
+layout: post
+title:  "Install docker on REDHAT 7.2"
+date:   2016-08-22 +0800
+categories:
+- linux
+- docker
+- automation
+tags:
+- linux
+- centos
+- redhat
+- docker
+- docker installation
+---
+
+Steps to install docker on REDHAT 7.2 machines
+
+- **Step 1**: Enable extras and optional rpms repo 
+ 
+ {% highlight shell %}
+ subscription-manager repos --enable=rhel-7-server-extras-rpms
+ subscription-manager repos --enable=rhel-7-server-optional-rpms
+ {% endhighlight %}
+ 
+ - **Step 2**: To install default version of the docker on RHEL 7 systems 
+ 
+ {% highlight shell %}
+ yum install docker device-mapper-libs device-mapper-event-libs
+ {% endhighlight %}
+
+- **Step 3**: Now enable and start *docker daemons* via `systemctl`
+  
+  {% highlight shell %}
+  systemctl enable docker
+  systemctl start docker
+  {% endhighlight %}
+ 

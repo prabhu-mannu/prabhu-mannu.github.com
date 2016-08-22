@@ -21,7 +21,7 @@ In *redhat 7* and *centos 7*  have to install **lm_sensors** package.
 yum reinstall lm_sensors -y
 {% endhighlight %}
 
-#### Example outpot :
+#### Example output :
 
 {% highlight shell %}
 [prabhu@localhost ~]$ sensors

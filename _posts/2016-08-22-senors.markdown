@@ -13,7 +13,7 @@ tags:
 - sensors
 ---
 
-Can monitor the cpu and disk tempareatures using `senors` command.
+Can monitor the cpu and disk temperatures  using `senors` command.
 
 In *redhat 7* and *centos 7*  have to install **lm_sensors** package.
 

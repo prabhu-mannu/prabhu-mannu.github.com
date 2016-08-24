@@ -1,0 +1,120 @@
+---
+layout: post
+title:  "How to install Unbound DNS server on CentOS 7.2 and Redhat 7.2"
+date:   2016-08-24 +0800
+categories:
+- linux
+- DNS Server
+- Unbound
+tags:
+- linux
+- redhat 
+- centos 
+- DNS Server
+- Unbound
+---
+
+To install unbound DNS server on CentOS 7.2 and RedHat 7.2
+
+- **step 1:** Install Unbound DNS server using yum
+{% highlight shell %}
+yum install unbound -y
+{% endhighlight %}
+
+- **step 2:** Enable unbound to listen on localhost or 127.0.0.1 Edit the `/etc/unbound/unbound.conf` add the line `interface : 127.0.0.1`
+   
+- **step 3:** Add the root hits file 
+
+The conf file shows where to get the root hints from
+{% highlight shell %}
+# file to read root hints from.
+# get one from ftp://FTP.INTERNIC.NET/domain/named.cache
+# root-hints: ""
+{% endhighlight %}
+
+   Use wget to download the root hits file from the said location
+{% highlight shell %}
+wget ftp://FTP.INTERNIC.NET/domain/named.cache /var/lib/unbound/named.cache
+{% endhighlight %}
+    
+   now back to the unbound.conf file, specify the root hints file. After changing the above lines should look like this
+{% highlight shell %}
+# file to read root hints from.
+# get one from ftp://FTP.INTERNIC.NET/domain/named.cache
+root-hints: "/var/lib/unbound/named.cache"
+{% endhighlight %}    
+    
+
+- **step 4:** use `restorecon` to set proper selinux context for the root hints file
+{% highlight shell %}
+restorecon -RFv /var/lib/unbound/*
+restorecon reset /var/lib/unbound/named.cache context unconfined_u:object_r:named_cache_t:s0->system_u:object_r:named_cache_t:s0
+{% endhighlight %}
+ 
+- **step 5:** Enable unbound dns server using `systemctl`  
+{% highlight shell %}
+systemctl enable unbound
+{% endhighlight %}
+
+- **step 6:** Start the unbound dns server
+{% highlight shell %}
+systemctl start unbound
+{% endhighlight %}
+
+- **step 7:** verify if the unbound dns server has started or not
+{% highlight shell %}
+systemctl status unbound
+{% endhighlight %}
+
+or
+
+{% highlight shell %}
+[root@localhost conf.d]$ systemctl is-active unbound
+active
+{% endhighlight %}
+
+- **step 8:** verify if the dns server works properly using nslookup
+
+{% highlight shell %}
+prabhu@localhost unbound]$ nslookup
+> server 127.0.0.1
+Default server: 127.0.0.1
+Address: 127.0.0.1#53
+> google.com
+Server:		127.0.0.1
+Address:	127.0.0.1#53
+
+Non-authoritative answer:
+Name:	google.com
+Address: 203.116.189.55
+Name:	google.com
+Address: 203.116.189.24
+Name:	google.com
+Address: 203.116.189.29
+Name:	google.com
+Address: 203.116.189.40
+Name:	google.com
+Address: 203.116.189.50
+Name:	google.com
+Address: 203.116.189.30
+Name:	google.com
+Address: 203.116.189.45
+Name:	google.com
+Address: 203.116.189.49
+Name:	google.com
+Address: 203.116.189.39
+Name:	google.com
+Address: 203.116.189.35
+Name:	google.com
+Address: 203.116.189.34
+Name:	google.com
+Address: 203.116.189.25
+Name:	google.com
+Address: 203.116.189.54
+Name:	google.com
+Address: 203.116.189.44
+Name:	google.com
+Address: 203.116.189.59
+Name:	google.com
+Address: 203.116.189.20
+{% endhighlight %}

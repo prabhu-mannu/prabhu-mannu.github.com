@@ -26,7 +26,16 @@ public class Test {
     }
 }
 ```
-
 {% highlight java %}
-wget ftp://FTP.INTERNIC.NET/domain/named.cache /var/lib/unbound/named.cache
+public class Test {
+    public static void main(String[]args){
+        List<String> list=new ArrayList<>();
+        list.add("Item1");
+        list.add("Item2");
+        list.add("Item3");
+        list.add("Item4");
+        //Simple online to sout the list works the same for Objects by using toString
+        list.forEach(System.out::println);
+    }
+}
 {% endhighlight %}

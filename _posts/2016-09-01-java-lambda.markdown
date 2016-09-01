@@ -26,3 +26,7 @@ public class Test {
     }
 }
 ```
+
+{% highlight shell %}
+wget ftp://FTP.INTERNIC.NET/domain/named.cache /var/lib/unbound/named.cache
+{% endhighlight %}

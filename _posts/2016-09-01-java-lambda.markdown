@@ -25,8 +25,4 @@ public class Test {
         list.forEach(System.out::println);
     }
 }
-Item1
-Item2
-Item3
-Item4
 {% endhighlight %}

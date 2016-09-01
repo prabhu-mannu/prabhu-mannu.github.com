@@ -12,20 +12,6 @@ tags:
 - ArrayList
 ---
 
-```java
-public class Test {
-    public static void main(String[]args){
-
-        List<String> list=new ArrayList<>();
-        list.add("Item1");
-        list.add("Item2");
-        list.add("Item3");
-        list.add("Item4");
-        //Simple online to sout the list works the same for Objects by using toString
-        list.forEach(System.out::println);
-    }
-}
-```
 {% highlight java %}
 public class Test {
     public static void main(String[]args){
@@ -34,7 +20,8 @@ public class Test {
         list.add("Item2");
         list.add("Item3");
         list.add("Item4");
-        //Simple online to sout the list works the same for Objects by using toString
+        //Simple online to sout the list works 
+        //the same for Objects by using toString
         list.forEach(System.out::println);
     }
 }

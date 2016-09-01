@@ -12,7 +12,7 @@ tags:
 - ArrayList
 ---
 
-{% highlight java %}
+```java
 public class Test {
     public static void main(String[]args){
 
@@ -25,4 +25,4 @@ public class Test {
         list.forEach(System.out::println);
     }
 }
-{% endhighlight %}
+```

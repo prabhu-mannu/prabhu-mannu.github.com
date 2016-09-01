@@ -13,7 +13,6 @@ tags:
 ---
 
 {% highlight java %}
-
 public class Test {
     public static void main(String[]args){
 
@@ -26,10 +25,8 @@ public class Test {
         list.forEach(System.out::println);
     }
 }
-
 Item1
 Item2
 Item3
 Item4
-
 {% endhighlight %}

@@ -11,3 +11,24 @@ tags:
 - redhat
 - kvm setup
 ---
+
+{% highlight shell %}
+[prabhu@localhost ~]$ sudo yum groupinfo  "Virtualization Host"
+Failed to set locale, defaulting to C
+Loaded plugins: product-id, search-disabled-repos, subscription-manager
+
+Environment Group: Virtualization Host
+ Environment-Id: virtualization-host-environment
+ Description: Minimal virtualization host.
+ Mandatory Groups:
+   +base
+   +core
+   +virtualization-hypervisor
+   +virtualization-tools
+ Optional Groups:
+   +debugging
+   +network-file-system-client
+   +remote-system-management
+   +virtualization-platform
+[prabhu@localhost ~]$ yum groupinstall "Virtualization Host" -y
+{% endhighlight %}

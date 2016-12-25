@@ -35,7 +35,7 @@ Environment Group: Virtualization Host
 
 after installation enable libvirtd service 
 
-{% highlist shell %}
+{% highlight shell %}
 [prabhu@localhost ~]$ sudo systemctl enable libvirtd 
 Created symlink from /etc/systemd/system/sockets.target.wants/virtlockd.socket to /usr/lib/systemd/system/virtlockd.socket.
 [prabhu@localhost ~]$ sudo systemctl start libvirtd
@@ -56,7 +56,7 @@ Created symlink from /etc/systemd/system/sockets.target.wants/virtlockd.socket t
 
 To verifiy that everything is working 
 ( i have docker container service enabled on this host so it displays lxc status, for kvm only QEMU servies are important )
-{% highlist shell %}
+{% highlight shell %}
 [prabhu@untrinilium ~]$ virt-host-validate 
 setlocale: No such file or directory
   QEMU: Checking for hardware virtualization                                 : PASS
@@ -100,7 +100,7 @@ setlocale: No such file or directory
 
 optionally can install virtual machine manager gui
 
-{% highlist shell %}
+{% highlight shell %}
 [prabhu@untrinilium ~]$ yum search virt-manager
 {% endhighlight %}
 

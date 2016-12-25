@@ -56,6 +56,7 @@ Created symlink from /etc/systemd/system/sockets.target.wants/virtlockd.socket t
 
 To verifiy that everything is working 
 ( i have docker container service enabled on this host so it displays lxc status, for kvm only QEMU servies are important )
+
 {% highlight shell %}
 [prabhu@untrinilium ~]$ virt-host-validate 
 setlocale: No such file or directory

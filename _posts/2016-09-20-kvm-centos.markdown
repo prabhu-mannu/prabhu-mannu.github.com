@@ -101,10 +101,10 @@ setlocale: No such file or directory
    LXC: Checking for cgroup 'blkio' controller mount-point                   : PASS
 {% endhighlight %}
 
-optionally can install virtual machine manager gui
+Optionally can install virtual machine manager gui
 
 {% highlight shell %}
-[prabhu@untrinilium ~]$ yum search virt-manager
+[prabhu@untrinilium ~]$ sudo yum install virt-manager -y
 {% endhighlight %}
 
 **this is simple/basic installation of the kvm on redhat 7**

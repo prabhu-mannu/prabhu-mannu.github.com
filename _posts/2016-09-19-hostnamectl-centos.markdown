@@ -19,9 +19,7 @@ hostnamectl command can be used
 
 status flag gives the full details of the hostname
 
-```
-hostnamectl status
-
+{% highlight shell %}
 [prabhu@localhost ~]$ hostnamectl status
    Static hostname: localhost.localdomain
          Icon name: computer-laptop
@@ -32,11 +30,12 @@ hostnamectl status
        CPE OS Name: cpe:/o:redhat:enterprise_linux:7.3:GA:server
             Kernel: Linux 3.10.0-327.36.2.el7.x86_64
       Architecture: x86-64
+{% endhighlight %}
 
-```
 **set-hostname** flag sets the hostname 
 **--static** flag indicates the static hostname
 **--pretty** flag indicates the description of the host
+
 {% highlight shell %}
 [prabhu@localhost ~]$ sudo hostnamectl set-hostname "untrinilium.scriptbyte.local" --static
 [prabhu@localhost ~]$ sudo hostnamectl set-hostname "my personal workstation" --pretty

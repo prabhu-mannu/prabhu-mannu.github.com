@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "Clear all eclipse run configuration"
+date:   2017-11-17 +0900
+categories:
+- eclipse
+- java
+tags:
+- eclipse
+- ide
+- mac
+---
+
+you can clear all the eclipse run configuration by deleting the files in the following folder
+ 
+{% highlight shell %}
+/eclipse-workspace/.metadata/.plugins/org.eclipse.debug.core/.launches
+{% endhighlight %}
